@@ -1,6 +1,4 @@
-# Take an argument of a collection, iterate through that collection, then execute the code in the block for each element in the collection. Return the modified collection.
-
-
+# Take an argument of a collection, iterate through the collection feeding each element to the code block, then return the modified collection.
 def my_collect(collection)
   i = 0
   while i < collection.length
@@ -9,26 +7,3 @@ def my_collect(collection)
   end
   collection                   # Return modified array
 end
-  
-
-array = ["Tim Jones", "Tom Smith", "Jim Campagno"]
-my_collect(array) do |name|
-  name.split(" ").first
-end
-
-
-
-
-collection = ['ruby', 'javascript', 'python', 'objective-c']
-my_collect(collection) do |lang|
-  lang.upcase
-end
- 
-# => ["RUBY", "JAVASCRIPT", "PYTHON", "OBJECTIVE-C"]
-
-
-
-bundle
-
-install 
-
