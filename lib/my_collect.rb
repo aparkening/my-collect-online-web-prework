@@ -11,6 +11,16 @@ def my_collect(collection)
   return modified collection
   
   
+  
+  i = 0
+  while i < collection.length
+    yield(collection[i])
+    i += 1
+  end
+  collection                   # Return array
+end
+  
+  
 end
 
 call block
