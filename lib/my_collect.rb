@@ -14,3 +14,8 @@ def my_collect(collection)
 end
 
 call block
+
+array = ["Tim Jones", "Tom Smith", "Jim Campagno"]
+my_collect(array) do |name|
+  name.split(" ").first
+end
