@@ -2,28 +2,14 @@
 
 
 def my_collect(collection)
-  
-  
-  Iterate through collection
-  
-  yield to block
-  
-  return modified collection
-  
-  
-  
   i = 0
   while i < collection.length
-    yield(collection[i])
+    collection[i] = yield(collection[i])
     i += 1
   end
-  collection                   # Return array
+  collection                   # Return modified array
 end
   
-  
-end
-
-call block
 
 array = ["Tim Jones", "Tom Smith", "Jim Campagno"]
 my_collect(array) do |name|
